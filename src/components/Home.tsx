@@ -52,7 +52,7 @@ export default function Home() {
     }
 
     const markAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
-        if (!gameOver && !finalAnswer) {
+        if (!finalAnswer) {
             const answerValue = e.currentTarget.value;
             let answerArray: string[] = [];
 
@@ -82,7 +82,7 @@ export default function Home() {
             }
 
 
-            let answerListCopy = [...answerList] //import in order to get rid of the reference
+            let answerListCopy = [...answerList] //spread in order to get rid of the reference
             answerListCopy.splice(number, 1)
             answerListCopy.push(answer)
             setAnswerList(answerListCopy)
