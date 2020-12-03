@@ -123,7 +123,6 @@ export default function Home() {
                     {!loading && !gameOver && (
                         <button id='endButton' className='end' onClick={endQuiz}>End Quiz</button>
                     )}
-
                 </div >
             </Wrapper>
         </>
