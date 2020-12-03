@@ -22,7 +22,6 @@ export default function Home() {
         setLoading(true)
         setGameOver(false)
 
-        //TODO errorhandling
         const newQuestions = await fetchQuestions()
         setQuestion(newQuestions)
         setScore(0)
