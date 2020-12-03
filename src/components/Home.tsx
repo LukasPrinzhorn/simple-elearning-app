@@ -115,7 +115,7 @@ export default function Home() {
                             totalQuestions={TOTAL_QUESTIONS} />
                     )}
                     {!loading && !gameOver && !finalAnswer && (
-                        <button id='checkButton' className='next' disabled={answerList.length !== number + 1} onClick={checkAnswer}>Check Answer</button>
+                        <button id='checkButton' className='next' disabled={answerList.length !== number + 1 || answerList[number].answers.length === 0} onClick={checkAnswer}>Check Answer</button>
                     )}
                     {!loading && !gameOver && finalAnswer && number !== TOTAL_QUESTIONS - 1 ? (
                         <button className='next' onClick={nextQuestion}>Next Question</button>
