@@ -34,7 +34,7 @@ const dummyObject = {
         {
             image: '',
             question: 'Which specific features werde introduced with ECMAScript 2020?',
-            correct_answers: ['BigInt', 'matchAll method for strings', 'globalThis', 'A function-like” import() module loading syntax to asynchronously import modules'],
+            correct_answers: ['BigInt', 'matchAll method for strings', 'globalThis', 'A "function-like" import() module loading syntax to asynchronously import modules'],
             incorrect_answers: [],
         },
         {
