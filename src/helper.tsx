@@ -1,6 +1,12 @@
 export default function shuffleArray(array: any[], array2: any[]) {
     const combinedArray = array.concat(array2)
-    return [...combinedArray].sort(() => Math.random() - 0.5);
+    for (let i = 0; i < combinedArray.length; i++) {
+        const temp = combinedArray[i];
+        const j = Math.floor(Math.random() * (combinedArray.length));
+        combinedArray[i] = combinedArray[j];
+        combinedArray[j] = temp;
+    }
+    return combinedArray;
 }
 
 export function arraysEqual(a: string[], b: string[]) {
