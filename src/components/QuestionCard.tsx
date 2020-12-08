@@ -1,6 +1,7 @@
 import React from 'react'
 import { Answer, ExtendedQuestion } from '../entities/entities'
 import { ButtonWrapper, CardWrapper } from './QuestionCard.styles'
+import ReactMarkdown from "react-markdown";
 
 type Props = {
     questions: ExtendedQuestion[];
@@ -23,7 +24,7 @@ const QuestionCard: React.FC<Props> = ({
     return (
         <CardWrapper>
             <p className='number'>Question {questionNr} / {totalQuestions}</p>
-            <p dangerouslySetInnerHTML={{ __html: currentQuestion.question }} />
+            <ReactMarkdown source={currentQuestion.question} />
             {currentQuestion.image !== null && currentQuestion.image !== '' && (
                 <img src={currentQuestion.image} alt='image' />
             )}
@@ -36,7 +37,7 @@ const QuestionCard: React.FC<Props> = ({
                         isFinal={isFinal}
                         userClicked={userAnswer ? userAnswer.answers.includes(answer) : false}>
                         <button disabled={isFinal} value={answer} onClick={callback}>
-                            <span dangerouslySetInnerHTML={{ __html: answer }} />
+                            <ReactMarkdown source={answer}/>
                         </button>
                     </ButtonWrapper>
                 )

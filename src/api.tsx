@@ -6,7 +6,7 @@ const dummyObject = {
     results: [
         {
             image: 'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350',
-            question: 'What is true about ReactJS',
+            question: '**What is true about ReactJS**',
             correct_answers: ['Library for building interaction interfaces', 'Created by Facebook',],
             incorrect_answers: [
                 'Client Side Framework',

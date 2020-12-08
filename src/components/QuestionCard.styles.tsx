@@ -34,6 +34,10 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   }
   
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     cursor: ${({ isFinal }) =>
     !isFinal
       ? 'pointer'
@@ -43,7 +47,7 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
     font-size: 0.8rem;
     width: 500px;
     height: 40px;
-    margin: 5px 0;
+    margin: 10px 0;
 
     background: ${({ correct, isFinal, userClicked }) =>
     userClicked
@@ -60,6 +64,5 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
     isFinal && !userClicked && correct
       ? '#00ff00'
       : '#fff'};
-    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
   }
 `;
