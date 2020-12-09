@@ -1,8 +1,14 @@
 export default function shuffleArray(array: any[], array2: any[]) {
-    const combinedArray = array.concat(array2)
-    for (let i = 0; i < combinedArray.length; i++) {
+    const combinedArray: any[] = array.concat(array2)
+    let length = combinedArray.length;
+    let indeces: number[] = [];
+
+    for (let i = 0; i < length; i++) {
+        indeces.push(i);
+    }
+    for (let i = length-1; i >= 0; i--) {
         const temp = combinedArray[i];
-        const j = Math.floor(Math.random() * (combinedArray.length));
+        const j = Math.floor(Math.random() * (i + 1));
         combinedArray[i] = combinedArray[j];
         combinedArray[j] = temp;
     }
